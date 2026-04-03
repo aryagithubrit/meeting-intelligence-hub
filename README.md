@@ -69,13 +69,13 @@ Transcript → Processing → Structured Intelligence
 ![Welcome](screenshot3.png)
 
 ### 🔹 Upload Page
-![Upload](screenshot4.png)
+![Upload](screenshot6.png)
 
 ### 🔹 Analysis Page
 ![Analysis](screenshot5.png)
 
 ### 🔹 Analysis cont
-![Results](screenshot6.png)
+![Results](screenshot4.png)
 
 ---
 
