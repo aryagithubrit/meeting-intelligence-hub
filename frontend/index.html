@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meeting Intelligence Hub</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI';
+            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: white;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% }
+            50% { background-position: 100% }
+            100% { background-position: 0% }
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .glass {
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            background: #00c6ff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .hidden { display: none; }
+
+        .card {
+            background: rgba(255,255,255,0.08);
+            margin: 20px auto;
+            padding: 20px;
+            width: 60%;
+            border-radius: 10px;
+        }
+
+        .high { color: red; }
+        .medium { color: orange; }
+        .low { color: lightgreen; }
+
+        .spinner {
+            border: 5px solid rgba(255,255,255,0.2);
+            border-top: 5px solid #00c6ff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- WELCOME -->
+<div id="welcome" class="center">
+    <div class="glass">
+        <h1>🚀 Meeting Intelligence Hub</h1>
+        <p>AI-powered meeting analysis</p>
+        <button onclick="goToUpload()">Start</button>
+    </div>
+</div>
+
+<!-- UPLOAD -->
+<div id="uploadPage" class="hidden center">
+    <div class="glass">
+        <h2>Upload Transcript</h2>
+        <input type="file" id="fileInput"><br>
+        <button onclick="uploadAndAnalyze()">Analyze</button>
+    </div>
+</div>
+
+<!-- LOADER -->
+<div id="loader" class="hidden center">
+    <div class="glass">
+        <h2>🤖 AI is analyzing...</h2>
+        <div class="spinner"></div>
+    </div>
+</div>
+
+<!-- RESULTS -->
+<div id="results" class="hidden">
+
+    <div class="card">
+        <h3>📊 Metrics</h3>
+        <p>Confidence: <span id="confidence"></span>%</p>
+        <p>Health: <span id="health"></span>%</p>
+    </div>
+
+    <div class="card">
+        <h3>🧠 Insights</h3>
+        <ul id="insights"></ul>
+    </div>
+
+    <div class="card">
+        <h3>📌 Summary</h3>
+        <ul id="summary"></ul>
+    </div>
+
+    <div class="card">
+        <h3>🔥 Actions</h3>
+        <ul id="actions"></ul>
+    </div>
+
+    <div class="card">
+        <h3>✅ Decisions</h3>
+        <ul id="decisions"></ul>
+    </div>
+
+    <div class="card">
+        <h3>⚠ Risks</h3>
+        <ul id="risks"></ul>
+    </div>
+
+    <button onclick="downloadReport()">⬇ Download Report</button>
+
+</div>
+
+<script>
+
+function goToUpload() {
+    document.getElementById("welcome").classList.add("hidden");
+    document.getElementById("uploadPage").classList.remove("hidden");
+}
+
+function getPriorityClass(priority) {
+    return priority.toLowerCase();
+}
+
+async function uploadAndAnalyze() {
+
+    const file = document.getElementById("fileInput").files[0];
+    if (!file) return alert("Select file");
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    document.getElementById("uploadPage").classList.add("hidden");
+    document.getElementById("loader").classList.remove("hidden");
+
+    const response = await fetch("http://127.0.0.1:8006/analyze/", {
+        method: "POST",
+        body: formData
+    });
+
+    const data = await response.json();
+
+    document.getElementById("loader").classList.add("hidden");
+    document.getElementById("results").classList.remove("hidden");
+
+    const d = data.basic_analysis;
+
+    document.getElementById("confidence").innerText = d.confidence_score;
+    document.getElementById("health").innerText = d.meeting_health;
+
+    document.getElementById("insights").innerHTML =
+        d.insights.map(i => `<li>${i}</li>`).join("");
+
+    document.getElementById("summary").innerHTML =
+        d.summary.map(s => `<li>${s}</li>`).join("");
+
+    document.getElementById("actions").innerHTML =
+        d.actions.map(a =>
+            `<li class="${getPriorityClass(a.priority)}">
+            ${a.person}: ${a.task} (${a.priority})
+            </li>`
+        ).join("");
+
+    document.getElementById("decisions").innerHTML =
+        d.decisions.map(d => `<li>${d}</li>`).join("");
+
+    document.getElementById("risks").innerHTML =
+        d.risks.map(r => `<li>${r}</li>`).join("");
+}
+
+function downloadReport() {
+    const text = document.body.innerText;
+    const blob = new Blob([text], { type: "text/plain" });
+
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "meeting_report.txt";
+    a.click();
+}
+
+</script>
+
+</body>
+</html>
