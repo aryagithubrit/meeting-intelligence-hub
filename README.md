@@ -4,13 +4,9 @@
 
 ---
 
-```markdown
 ## 🎥 Demo
 
-![Demo](./demo.gif)
-```
-
-> If GitHub doesn’t support your video, convert it to a GIF or upload to Drive and paste the link.
+![Demo](demo.gif)
 
 ---
 
