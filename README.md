@@ -65,13 +65,17 @@ Transcript → Processing → Structured Intelligence
 
 ## 📸 Screenshots
 
-### 🔹 Welcome Screen
+### 🔹 Welcome Page
+![Welcome](screenshot3.png)
 
-![Welcome](Screenshot%20\(52\).png)
+### 🔹 Upload Page
+![Upload](screenshot4.png)
 
-### 🔹 Results Dashboard
+### 🔹 Analysis Page
+![Analysis](screenshot5.png)
 
-*(Add your second screenshot here)*
+### 🔹 Analysis cont
+![Results](screenshot6.png)
 
 ---
 
