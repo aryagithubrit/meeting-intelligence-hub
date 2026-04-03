@@ -6,7 +6,13 @@ from openai import OpenAI
 load_dotenv()
 
 # Initialize client
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = None
+
+def get_client():
+    global client
+    if client is None:
+        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    return client
 
 def analyze_with_ai(text):
     prompt = f"""
@@ -23,7 +29,7 @@ def analyze_with_ai(text):
     """
 
     try:
-        response = client.chat.completions.create(
+        response = get_client().chat.completions.create(
             model="gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}]
         )
