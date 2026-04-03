@@ -8,7 +8,6 @@
 
 ![Demo](demo.gif)
 
-# 🚀 Meeting Intelligence Hub
 
 ---
 
