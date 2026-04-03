@@ -4,12 +4,10 @@
 
 ---
 
-## 🎥 Demo (Watch this first)
-
-👉 *(Add your screen recording here)*
-
 ```markdown
-![Demo](demo.gif)
+## 🎥 Demo
+
+![Demo](./demo.gif)
 ```
 
 > If GitHub doesn’t support your video, convert it to a GIF or upload to Drive and paste the link.
