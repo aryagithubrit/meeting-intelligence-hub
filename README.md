@@ -8,60 +8,76 @@
 
 ![Demo](demo.gif)
 
----
-
-## 💡 The Idea
-
-Ever sat in a meeting and thought:
-
-> “Wait… what exactly did we decide?”
-
-That’s the problem this project solves.
-
-Instead of re-reading long transcripts, this tool extracts:
-
-* 📌 What was discussed
-* ✅ What needs to be done
-* 🎯 What was decided
-* ⚠️ What might go wrong
+# 🚀 Meeting Intelligence Hub
 
 ---
 
-## ⚡ What makes this different?
+## 🔴 The Problem
 
-Most tools just summarize.
-
-👉 This goes further:
-
-* Assigns **priority to tasks**
-* Identifies **who said what**
-* Detects **risks and delays**
-* Gives a **structured breakdown of the meeting**
+Modern organizations conduct frequent meetings that generate long transcripts. Important information such as decisions, action items, and risks often gets buried in these transcripts, forcing teams to revisit discussions instead of executing tasks efficiently.
 
 ---
 
-## 🧠 How it works
+## 🟢 The Solution
 
-```
-Transcript → Processing → Structured Intelligence
+Meeting Intelligence Hub transforms raw meeting transcripts into structured insights. It automatically extracts summaries, action items, decisions, and risks, helping teams quickly understand outcomes and take action without re-reading entire transcripts.
+
+---
+
+## ⚙️ Tech Stack
+
+* **Languages:** Python, JavaScript
+* **Backend:** FastAPI
+* **Frontend:** HTML, CSS, JavaScript
+* **AI Integration:** OpenAI API
+* **Other Tools:** dotenv
+
+---
+
+## 🛠 Setup Instructions
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/aryagithubrit/meeting-intelligence-hub.git
+cd meeting-intelligence-hub
 ```
 
-### Behind the scenes:
+### 2. Create virtual environment
 
-* Custom rule-based extraction engine
-* AI-powered analysis using OpenAI
-* Clean UI for visualization
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
 
----
+### 3. Install dependencies
 
-## 🛠 Tech Stack
+```bash
+pip install -r requirements.txt
+```
 
-* ⚙️ FastAPI (Backend)
-* 🎨 HTML + CSS + JS (Frontend)
-* 🤖 OpenAI API (AI layer)
-* 🐍 Python
+### 4. Add API key
 
----
+Create a `.env` file:
+
+```env
+OPENAI_API_KEY=your_api_key_here
+```
+
+### 5. Run backend
+
+```bash
+uvicorn backend.app:app --reload --port 8006
+```
+
+### 6. Run frontend
+
+Open:
+
+```
+frontend/index.html
+```
+
 
 ## 📸 Screenshots
 
