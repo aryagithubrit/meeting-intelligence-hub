@@ -98,23 +98,23 @@ frontend/index.html
 
 This project wasn’t straightforward at all:
 
-* 🔒 GitHub blocked my push because of exposed API key
+*  GitHub blocked my push because of exposed API key
   → learned how to properly secure secrets
 
-* 🌐 Frontend couldn't talk to backend (CORS nightmare 😭)
+*  Frontend couldn't talk to backend (CORS nightmare 😭)
   → fixed using middleware
 
-* ⚙️ FastAPI import issues (`ModuleNotFoundError`)
+*  FastAPI import issues (`ModuleNotFoundError`)
   → restructured project properly
 
-* 🔄 Infinite loading bug in frontend
+*  Infinite loading bug in frontend
   → debugged using browser console
 
 Honestly, most learning happened while fixing these.
 
 ---
 
-## 🔐 Security
+##  Security
 
 API keys are **not stored in the code**.
 
@@ -125,12 +125,12 @@ They are handled using:
 
 ---
 
-## 🚀 Future Scope
+##  Future Scope
 
-* 🎙 Real-time meeting transcription
-* 📊 Meeting analytics dashboard
-* 👥 Team collaboration features
-* ☁️ Deployment as SaaS
+* Real-time meeting transcription
+* Meeting analytics dashboard
+* Team collaboration features
+* Deployment as SaaS
 
 ---
 
@@ -140,7 +140,7 @@ Hi,i am arya a btech undergrad in the trade electronics and communication..As a 
 
 ---
 
-## ⭐ Final Thought
+##  Final Thought
 
 This started as a simple idea,
 but ended up becoming a full-stack system combining:
@@ -149,4 +149,4 @@ but ended up becoming a full-stack system combining:
 * frontend experience
 * AI integration
 
-And a lot of debugging as always ☕
+And a lot of debugging as always 
