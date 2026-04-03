@@ -101,7 +101,7 @@ This project wasn’t straightforward at all:
 *  GitHub blocked my push because of exposed API key
   → learned how to properly secure secrets
 
-*  Frontend couldn't talk to backend (CORS nightmare 😭)
+*  Frontend couldn't talk to backend
   → fixed using middleware
 
 *  FastAPI import issues (`ModuleNotFoundError`)
@@ -109,8 +109,6 @@ This project wasn’t straightforward at all:
 
 *  Infinite loading bug in frontend
   → debugged using browser console
-
-Honestly, most learning happened while fixing these.
 
 ---
 
