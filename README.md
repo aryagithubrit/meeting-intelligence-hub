@@ -1,4 +1,4 @@
-# 🚀 Meeting Intelligence Hub
+# Meeting Intelligence Hub
 
 ### *Turning conversations into decisions.*
 
@@ -79,7 +79,7 @@ Transcript → Processing → Structured Intelligence
 
 ---
 
-## 🚧 Challenges I Faced (Real Ones 😅)
+## 🚧 Challenges I Faced 
 
 This project wasn’t straightforward at all:
 
@@ -121,7 +121,7 @@ They are handled using:
 
 ## 👨‍💻 About Me
 
-Built by someone who got tired of confusing meetings and decided to fix it 😄
+Hi,i am arya a btech undergrad in the trade electronics and communication..As a beginner in this field it was indeed very much difficult to handle too much of data together and coordinating them all together...however finnally managed to work it out.
 
 ---
 
@@ -134,4 +134,4 @@ but ended up becoming a full-stack system combining:
 * frontend experience
 * AI integration
 
-And a lot of debugging ☕
+And a lot of debugging as always ☕
