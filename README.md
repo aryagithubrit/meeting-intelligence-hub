@@ -3,6 +3,32 @@
 ### *Turning conversations into decisions.*
 
 ---
+## Approach
+
+The system is designed to process meeting data and extract structured information in an automated manner.
+
+1. Input Collection  
+   Meeting audio or text data is captured and converted into a usable format.
+
+2. Preprocessing  
+   The input is cleaned and segmented to remove noise and improve accuracy.
+
+3. Information Extraction  
+   Natural Language Processing techniques are used to identify key elements such as:
+   - Important discussion points  
+   - Action items  
+   - Key decisions  
+
+4. Task Classification  
+   Extracted action items are analyzed and automatically categorized based on priority levels (e.g., High, Medium, Low).
+
+5. Structuring Output  
+   The processed information is organized into a clear and readable format, including summaries and task lists.
+
+6. Output Generation  
+   The final output is presented to the user in an accessible format for quick understanding and follow-up.
+
+This approach ensures efficient conversion of unstructured meeting data into meaningful and actionable insights.
 
 ##  Demo
 
