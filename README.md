@@ -4,7 +4,7 @@
 
 ---
 
-## 🎥 Demo
+##  Demo
 
 ![Demo](demo.gif)
 
@@ -52,7 +52,7 @@ Meeting Intelligence Hub transforms raw meeting transcripts into structured insi
 
 ---
 
-## 🛠 Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the repository
 
@@ -97,7 +97,7 @@ frontend/index.html
 ```
 
 
-## 📸 Screenshots
+## Screenshots
 
 ### 🔹 Welcome Page
 ![Welcome](screenshot3.png)
