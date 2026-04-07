@@ -8,7 +8,7 @@
 
 ![Demo](demo.gif)
 
-Note: The application is demonstrated locally. Deployment was attempted but not included due to runtime constraints. Full functionality is shown in the demo above.
+Note:The application is demonstrated locally. Deployment was attempted but not included due to runtime constraints. 
 ---
 
 ## 🔴 The Problem
