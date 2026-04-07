@@ -8,7 +8,7 @@
 
 ![Demo](demo.gif)
 
-
+Note: The application is demonstrated locally. Deployment was attempted but not included due to runtime constraints. Full functionality is shown in the demo above.
 ---
 
 ## 🔴 The Problem
@@ -22,14 +22,33 @@ Modern organizations conduct frequent meetings that generate long transcripts. I
 Meeting Intelligence Hub transforms raw meeting transcripts into structured insights. It automatically extracts summaries, action items, decisions, and risks, helping teams quickly understand outcomes and take action without re-reading entire transcripts.
 
 ---
+## Features
 
-## ⚙️ Tech Stack
+- Upload meeting transcripts (.txt)
+- AI-powered analysis of conversations
+- Automatic extraction of:
+  - Summary
+  - Action Items
+  - Key Decisions
+  - Risks
+- Fast and simple UI for instant insights
+- Secure API key handling using environment variables
 
-* **Languages:** Python, JavaScript
-* **Backend:** FastAPI
-* **Frontend:** HTML, CSS, JavaScript
-* **AI Integration:** OpenAI API
-* **Other Tools:** dotenv
+## How It Works
+
+1. User uploads a meeting transcript via frontend  
+2. File is sent to FastAPI backend  
+3. Backend processes text and extracts insights  
+4. OpenAI API (optional) enhances analysis  
+5. Results are returned and displayed in UI
+
+## Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** FastAPI (Python)  
+- **AI:** OpenAI API  
+- **Libraries:** python-dotenv, python-multipart, requests  
+- **Tools:** Git, GitHub, VS Code
 
 ---
 
@@ -94,7 +113,7 @@ frontend/index.html
 
 ---
 
-## 🚧 Challenges I Faced 
+## Challenges I Faced 
 
 This project wasn’t straightforward at all:
 
@@ -132,19 +151,19 @@ They are handled using:
 
 ---
 
-## 👨‍💻 About Me
+## About Me
 
-Hi,i am arya a btech undergrad in the trade electronics and communication..As a beginner in this field it was indeed very much difficult to handle too much of data together and coordinating them all together...however finnally managed to work it out.
+Hi, I'm Arya, a BTech undergraduate in Electronics and Communication Engineering.  
+This project helped me explore full-stack development and AI integration, while also improving my problem-solving and debugging skills through real-world challenges.
 
 ---
 
 ##  Final Thought
 
-This started as a simple idea,
-but ended up becoming a full-stack system combining:
+This project evolved from a simple idea into a complete full-stack system combining:
 
-* backend logic
-* frontend experience
-* AI integration
+- Backend development  
+- Frontend design  
+- AI integration  
 
-And a lot of debugging as always 
+It reflects both technical learning and the ability to solve real-world problems through engineering.
